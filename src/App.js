@@ -3,6 +3,8 @@ import './App.css';
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Login from './components/Login'
 import Dashboard from './components/Dashboard';
+import Addproduct from './components/Addproduct'
+import Listproduct from './components/Listproduct'
 
 function App() {
   return (
@@ -13,6 +15,9 @@ function App() {
           <Route path='/' element={<Register/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
+          <Route path='/addproduct' element={<Addproduct/>}/>
+          <Route path='/listproduct' element={<Listproduct/>}/>
+
         </Routes>
       </div>
     </Router>
