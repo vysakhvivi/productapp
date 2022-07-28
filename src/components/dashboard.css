@@ -4,7 +4,9 @@
     gap:50px;
     font-family: 'Ubuntu', sans-serif;
     text-align: center;  
+    padding-top:50%;
 }
+
 
 .image{
     height: 200px; 
@@ -14,16 +16,6 @@ body {
     overflow: hidden;
   }
 
-  .dashboard{
-    height: 100vh;
-    background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
-
-  
   .ocean { 
     height: 5%;
     width:100%;
@@ -67,12 +59,4 @@ body {
     }
   }
 
-.s1{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-}
 

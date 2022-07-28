@@ -8,7 +8,6 @@ import './dashboard.css'
 function Dashboard() {
     return (
         <main className='dashboard'>
-            <section>
                 <Container className='dashcontainer' >
                     <Link to={'./addproduct'}>
                         <div className='addproduct'>
@@ -20,7 +19,7 @@ function Dashboard() {
                             </Card>
                         </div>
                     </Link>
-                    <Link to={'./listproject'}>
+                    <Link to={'./listproduct'}>
                         <div className='viewproduct'>
                             <Card style={{ width: '18rem', }}>
                                 <Card.Img className='image' variant="top" src={image2} />
@@ -36,7 +35,6 @@ function Dashboard() {
                         <div class="wave"></div>
                         <div class="wave"></div>
                 </div>
-            </section>
         </main>
     )
 }
