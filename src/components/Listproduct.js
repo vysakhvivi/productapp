@@ -11,35 +11,27 @@ function Listproduct() {
       <Table bordered hover>
         <thead>
           <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Category</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            
           </tr>
           <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            
           </tr>
           <tr>
-            <td>3</td>
-            <td colSpan={2}>Larry the Bird</td>
-            <td>@twitter</td>
+            
           </tr>
         </tbody>
       </Table>
       <div>
         <div className='button'>
-     <button className='button1'>Add Item</button>
+   <Link to={'./dashboard'}> <button className='button1'>Add Item</button></Link> 
         </div>
       </div>
     </div>
