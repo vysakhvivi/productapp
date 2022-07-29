@@ -1,13 +1,14 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
-import {Link} from 'react-router-dom'
+import {Link , Redirect} from 'react-router-dom'
+import {} from 'react-router'
 import './listproduct.css'
 
 
 function Listproduct() {
   return (
     <div className='t1'>
-      <Table striped bordered hover>
+      <Table bordered hover>
         <thead>
           <tr>
             <th>#</th>
@@ -38,7 +39,7 @@ function Listproduct() {
       </Table>
       <div>
         <div className='button'>
-          <button className='button1'>Add Item</button>
+     <button className='button1'>Add Item</button>
         </div>
       </div>
     </div>
