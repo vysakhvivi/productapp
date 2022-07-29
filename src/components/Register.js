@@ -17,16 +17,15 @@ const [place,setplace]=useState("");
         console.log(name,email,password,place);
     }
     
-const url="http://localhost:3000/"
+
 const postdata=async(res)=>{
     res.preventdefault();
 
-   axios.post(url,{
+   await axios.post("http://localhost:5000",{
     name, email, password, place
    })
-   .then(res=>{
-    console.log(res.data)
-   })
+   
+   
 
     const data = await res.json();
     if(data.status===422 || !data){
@@ -45,31 +44,31 @@ const postdata=async(res)=>{
         <div>
             <h1 className='heading'>REGISTRATION</h1>
         </div>
-            <form action="" method="POST" >
+            <form action="" onSubmit={getdata} method="POST" >
                 <div className='form-group'>
                     <label className='formlabel'>
                     <i class="zmdi zmdi-account-circle zmdi-hc-lg"></i> UserName
                     </label>
-                    <input type="text" name='name'  onChange={(e)=>setname(e.target.value)}  id='name' className='forminput' required placeholder='Enter the name'></input>
+                    <input type="text" name='name' value={name}  onChange={(e)=>setname(e.target.value)}  id='name' className='forminput' required placeholder='Enter the name'></input>
                 </div>
                 <div className='form-group'>
                     <label className='formlabel'>
                     <i class="zmdi zmdi-email zmdi-hc-lg"></i> Email
                     </label>
-                    <input type="email" onChange={(e)=>setemail(e.target.value)} name='email' id='email' className='forminput' required placeholder='Enter the email'/>
+                    <input type="email" value={email} onChange={(e)=>setemail(e.target.value)} name='email' id='email' className='forminput' required placeholder='Enter the email'/>
                 </div>
                 <div className='form-group'>
                     <label className='formlabel'>
                     <i class="zmdi zmdi-account zmdi-hc-lg"></i> Password
                     </label>
-                    <input type="password" onChange={(e)=>setpassword(e.target.value)} name='password' id='password' className='forminput' required placeholder='Enter the password'/>
+                    <input type="password" value={password} onChange={(e)=>setpassword(e.target.value)} name='password' id='password' className='forminput' required placeholder='Enter the password'/>
                 </div>
                 
                 <div className='form-group'>
                     <label className='formlabel'>
                     <i class="zmdi zmdi-gps-dot zmdi-hc-lg"></i> Place
                     </label>
-                    <input type="text" onChange={(e)=>setplace(e.target.value)}  name='place' id='place' className='forminput' required placeholder='Enter the place'/>
+                    <input type="text" value={place} onChange={(e)=>setplace(e.target.value)}  name='place' id='place' className='forminput' required placeholder='Enter the place'/>
                 </div>
                 <div className='button'>
                         <button type='submit' onClick={postdata} className='button1'>Register</button>

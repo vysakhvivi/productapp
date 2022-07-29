@@ -1,9 +1,16 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './login.css'
 import {useParams, Link} from 'react-router-dom'
 
 
 function Login() {
+
+    const postdata = (res)=>{
+
+    }
+    const [password,setpassword]=useState("");
+    const [email,setemail]=useState("");
+
     return (
         <div>
             <div className='logincontainer' >
@@ -12,19 +19,19 @@ function Login() {
                 </div>
                 <div className='form-group'>
                     <label className='formlabel'>
-                        <i class="zmdi zmdi-account-circle zmdi-hc-lg"></i> UserName
+                        <i class="zmdi zmdi-email zmdi-hc-lg"></i> UserName
                     </label>
-                    <input type="text" name='name' id='name' className='forminput' placeholder='Enter the name'></input>
+                    <input type="email" name='email' id='email' value={email} onChange={(e)=>setemail(e.target.value)} className='forminput' placeholder='Enter the email id'></input>
                 </div>
                 <div className='form-group'>
                     <label className='formlabel'>
                         <i class="zmdi zmdi-account zmdi-hc-lg"></i> Password
                     </label>
-                    <input type="password" name='password' id='password' className='forminput' placeholder='Enter the password' />
+                    <input type="password" name='password' value={password} id='password' onChange={(e)=>setpassword(e.target.value)} className='forminput' placeholder='Enter the password' />
                 </div>
                
                 <div className='button'>
-                    <button className='button1'>LOGIN</button>
+                    <button className='button1' onClick={postdata}>LOGIN</button>
                 </div>
                 <div className='alreadylogin'>
                     <Link to={'/'}>Not a current user ? Register here..</Link>
